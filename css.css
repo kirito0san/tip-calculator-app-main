@@ -1,0 +1,219 @@
+* {
+  font-family: "Space Mono", monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  gap: 60px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 41%, 84%);
+  flex-direction: column;
+}
+main {
+  background-color: hsl(0, 0%, 100%);
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  display: flex;
+  gap: 20px;
+}
+/* one */
+.one {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.starter {
+  color: hsl(186, 14%, 43%);
+}
+label {
+  border-radius: 10px;
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.one img {
+  position: absolute;
+  bottom: 7px;
+  left: 10px;
+}
+input {
+  caret-color: hsl(183, 100%, 15%);
+  width: 100%;
+  padding: 5px 10px;
+  outline: 0;
+  border: 1px solid hsl(189, 41%, 97%);
+  border-radius: 8px;
+  background-color: hsl(189, 41%, 97%);
+  direction: rtl;
+  color: hsl(183, 100%, 15%);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.tipsnum {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.tipsnum span:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.Custom,
+.tipsnum span {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  max-width: 100px;
+}
+label input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+input:focus {
+  border: 1px solid hsl(172, 67%, 45%);
+}
+.Custom:focus {
+  border: 1px solid hsl(172, 67%, 45%);
+}
+.Custom {
+  outline: 0;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+.Custom::placeholder {
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+}
+.selected {
+  background-color: hsl(172, 67%, 45%) !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+/* one */
+
+/* two */
+.two {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+  padding: 20px;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  position: relative;
+}
+.two div {
+  justify-content: space-between;
+  display: flex;
+  gap: 50px;
+}
+.two div p {
+  font-size: 12px;
+  color: white;
+}
+.two div p span {
+  color: hsl(185, 41%, 84%);
+  display: block;
+}
+.two div .num {
+  font-size: 26px;
+  color: hsl(172, 67%, 45%);
+}
+
+/*  
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+*/
+
+.two button {
+  width: 90%;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(186, 37%, 31%);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+/* two */
+.felx {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 10px;
+}
+.UP {
+  position: relative;
+  bottom: 10px;
+}
+.proplem {
+  display: none;
+  color: red;
+}
+@media screen and (max-width: 600px) {
+  main {
+    /* height: fit-content; */
+    width: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  body {
+    /* height: auto; */
+    padding-top: 50px;
+
+    justify-content: normal;
+  }
+  input {
+    font-size: 24px;
+  }
+  .tipsnum span {
+    width: 100%;
+    font-size: 24px;
+  }
+  .two {
+    height: 200px;
+  }
+  .one img {
+    bottom: 16px;
+  }
+  .tipsnum {
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Custom,
+  .tipsnum span {
+    max-width: 100%;
+  }
+}
